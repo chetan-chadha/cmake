@@ -6,9 +6,11 @@
 
 #IncludeRegexTransform: 
 
-/home/chetan/udacity/cmake_tutorial/main.cpp
+/home/chetan/udacity/cmake_tutorial/hello.cpp
+hello.hpp
+/home/chetan/udacity/cmake_tutorial/hello.hpp
 iostream
 -
-hello.hpp
+
 /home/chetan/udacity/cmake_tutorial/hello.hpp
 

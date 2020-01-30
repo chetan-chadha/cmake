@@ -1,3 +1,8 @@
 /home/chetan/udacity/cmake_tutorial/build/CMakeFiles/rebuild_cache.dir
 /home/chetan/udacity/cmake_tutorial/build/CMakeFiles/edit_cache.dir
-/home/chetan/udacity/cmake_tutorial/build/CMakeFiles/cmakedummy.dir
+/home/chetan/udacity/cmake_tutorial/build/say-hello/CMakeFiles/rebuild_cache.dir
+/home/chetan/udacity/cmake_tutorial/build/say-hello/CMakeFiles/edit_cache.dir
+/home/chetan/udacity/cmake_tutorial/build/say-hello/CMakeFiles/say-hello.dir
+/home/chetan/udacity/cmake_tutorial/build/hello-exe/CMakeFiles/rebuild_cache.dir
+/home/chetan/udacity/cmake_tutorial/build/hello-exe/CMakeFiles/edit_cache.dir
+/home/chetan/udacity/cmake_tutorial/build/hello-exe/CMakeFiles/cmakedummy.dir

@@ -6,9 +6,11 @@
 
 #IncludeRegexTransform: 
 
-/home/chetan/udacity/cmake_tutorial/main.cpp
+../say-hello/src/say-hello/hello.hpp
+
+/home/chetan/udacity/cmake_tutorial/hello-exe/main.cpp
 iostream
 -
-hello.hpp
-/home/chetan/udacity/cmake_tutorial/hello.hpp
+say-hello/hello.hpp
+-
 

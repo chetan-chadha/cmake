@@ -80,14 +80,14 @@ edit_cache/fast: edit_cache
 
 # The main all target
 all: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/chetan/udacity/cmake_tutorial/build/CMakeFiles /home/chetan/udacity/cmake_tutorial/build/CMakeFiles/progress.marks
-	$(MAKE) -f CMakeFiles/Makefile2 all
+	cd /home/chetan/udacity/cmake_tutorial/build && $(CMAKE_COMMAND) -E cmake_progress_start /home/chetan/udacity/cmake_tutorial/build/CMakeFiles /home/chetan/udacity/cmake_tutorial/build/say-hello/CMakeFiles/progress.marks
+	cd /home/chetan/udacity/cmake_tutorial/build && $(MAKE) -f CMakeFiles/Makefile2 say-hello/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/chetan/udacity/cmake_tutorial/build/CMakeFiles 0
 .PHONY : all
 
 # The main clean target
 clean:
-	$(MAKE) -f CMakeFiles/Makefile2 clean
+	cd /home/chetan/udacity/cmake_tutorial/build && $(MAKE) -f CMakeFiles/Makefile2 say-hello/clean
 .PHONY : clean
 
 # The main clean target
@@ -97,44 +97,60 @@ clean/fast: clean
 
 # Prepare targets for installation.
 preinstall: all
-	$(MAKE) -f CMakeFiles/Makefile2 preinstall
+	cd /home/chetan/udacity/cmake_tutorial/build && $(MAKE) -f CMakeFiles/Makefile2 say-hello/preinstall
 .PHONY : preinstall
 
 # Prepare targets for installation.
 preinstall/fast:
-	$(MAKE) -f CMakeFiles/Makefile2 preinstall
+	cd /home/chetan/udacity/cmake_tutorial/build && $(MAKE) -f CMakeFiles/Makefile2 say-hello/preinstall
 .PHONY : preinstall/fast
 
 # clear depends
 depend:
-	$(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 1
+	cd /home/chetan/udacity/cmake_tutorial/build && $(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 1
 .PHONY : depend
 
-#=============================================================================
-# Target rules for targets named say-hello
+# Convenience name for target.
+say-hello/CMakeFiles/say-hello.dir/rule:
+	cd /home/chetan/udacity/cmake_tutorial/build && $(MAKE) -f CMakeFiles/Makefile2 say-hello/CMakeFiles/say-hello.dir/rule
+.PHONY : say-hello/CMakeFiles/say-hello.dir/rule
 
-# Build rule for target.
-say-hello: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 say-hello
+# Convenience name for target.
+say-hello: say-hello/CMakeFiles/say-hello.dir/rule
+
 .PHONY : say-hello
 
 # fast build rule for target.
 say-hello/fast:
-	$(MAKE) -f say-hello/CMakeFiles/say-hello.dir/build.make say-hello/CMakeFiles/say-hello.dir/build
+	cd /home/chetan/udacity/cmake_tutorial/build && $(MAKE) -f say-hello/CMakeFiles/say-hello.dir/build.make say-hello/CMakeFiles/say-hello.dir/build
 .PHONY : say-hello/fast
 
-#=============================================================================
-# Target rules for targets named cmakedummy
+src/say-hello/hello.o: src/say-hello/hello.cpp.o
 
-# Build rule for target.
-cmakedummy: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 cmakedummy
-.PHONY : cmakedummy
+.PHONY : src/say-hello/hello.o
 
-# fast build rule for target.
-cmakedummy/fast:
-	$(MAKE) -f hello-exe/CMakeFiles/cmakedummy.dir/build.make hello-exe/CMakeFiles/cmakedummy.dir/build
-.PHONY : cmakedummy/fast
+# target to build an object file
+src/say-hello/hello.cpp.o:
+	cd /home/chetan/udacity/cmake_tutorial/build && $(MAKE) -f say-hello/CMakeFiles/say-hello.dir/build.make say-hello/CMakeFiles/say-hello.dir/src/say-hello/hello.cpp.o
+.PHONY : src/say-hello/hello.cpp.o
+
+src/say-hello/hello.i: src/say-hello/hello.cpp.i
+
+.PHONY : src/say-hello/hello.i
+
+# target to preprocess a source file
+src/say-hello/hello.cpp.i:
+	cd /home/chetan/udacity/cmake_tutorial/build && $(MAKE) -f say-hello/CMakeFiles/say-hello.dir/build.make say-hello/CMakeFiles/say-hello.dir/src/say-hello/hello.cpp.i
+.PHONY : src/say-hello/hello.cpp.i
+
+src/say-hello/hello.s: src/say-hello/hello.cpp.s
+
+.PHONY : src/say-hello/hello.s
+
+# target to generate assembly for a file
+src/say-hello/hello.cpp.s:
+	cd /home/chetan/udacity/cmake_tutorial/build && $(MAKE) -f say-hello/CMakeFiles/say-hello.dir/build.make say-hello/CMakeFiles/say-hello.dir/src/say-hello/hello.cpp.s
+.PHONY : src/say-hello/hello.cpp.s
 
 # Help Target
 help:
@@ -145,7 +161,9 @@ help:
 	@echo "... rebuild_cache"
 	@echo "... edit_cache"
 	@echo "... say-hello"
-	@echo "... cmakedummy"
+	@echo "... src/say-hello/hello.o"
+	@echo "... src/say-hello/hello.i"
+	@echo "... src/say-hello/hello.s"
 .PHONY : help
 
 
@@ -157,6 +175,6 @@ help:
 # No rule that depends on this can have commands that come from listfiles
 # because they might be regenerated.
 cmake_check_build_system:
-	$(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 0
+	cd /home/chetan/udacity/cmake_tutorial/build && $(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 0
 .PHONY : cmake_check_build_system
 

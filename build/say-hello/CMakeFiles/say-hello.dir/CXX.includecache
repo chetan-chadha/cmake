@@ -1,0 +1,16 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/home/chetan/udacity/cmake_tutorial/say-hello/src/say-hello/hello.cpp
+hello.hpp
+/home/chetan/udacity/cmake_tutorial/say-hello/src/say-hello/hello.hpp
+iostream
+-
+
+/home/chetan/udacity/cmake_tutorial/say-hello/src/say-hello/hello.hpp
+

@@ -53,46 +53,112 @@ CMAKE_BINARY_DIR = /home/chetan/udacity/cmake_tutorial/build
 # Directory level rules for the build root directory
 
 # The main recursive "all" target.
-all: CMakeFiles/cmakedummy.dir/all
+all: say-hello/all
+all: hello-exe/all
 
 .PHONY : all
 
 # The main recursive "preinstall" target.
-preinstall:
+preinstall: say-hello/preinstall
+preinstall: hello-exe/preinstall
 
 .PHONY : preinstall
 
 # The main recursive "clean" target.
-clean: CMakeFiles/cmakedummy.dir/clean
+clean: say-hello/clean
+clean: hello-exe/clean
 
 .PHONY : clean
 
 #=============================================================================
-# Target rules for target CMakeFiles/cmakedummy.dir
+# Directory level rules for directory hello-exe
+
+# Recursive "all" directory target.
+hello-exe/all: hello-exe/CMakeFiles/cmakedummy.dir/all
+
+.PHONY : hello-exe/all
+
+# Recursive "preinstall" directory target.
+hello-exe/preinstall:
+
+.PHONY : hello-exe/preinstall
+
+# Recursive "clean" directory target.
+hello-exe/clean: hello-exe/CMakeFiles/cmakedummy.dir/clean
+
+.PHONY : hello-exe/clean
+
+#=============================================================================
+# Directory level rules for directory say-hello
+
+# Recursive "all" directory target.
+say-hello/all: say-hello/CMakeFiles/say-hello.dir/all
+
+.PHONY : say-hello/all
+
+# Recursive "preinstall" directory target.
+say-hello/preinstall:
+
+.PHONY : say-hello/preinstall
+
+# Recursive "clean" directory target.
+say-hello/clean: say-hello/CMakeFiles/say-hello.dir/clean
+
+.PHONY : say-hello/clean
+
+#=============================================================================
+# Target rules for target say-hello/CMakeFiles/say-hello.dir
 
 # All Build rule for target.
-CMakeFiles/cmakedummy.dir/all:
-	$(MAKE) -f CMakeFiles/cmakedummy.dir/build.make CMakeFiles/cmakedummy.dir/depend
-	$(MAKE) -f CMakeFiles/cmakedummy.dir/build.make CMakeFiles/cmakedummy.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/chetan/udacity/cmake_tutorial/build/CMakeFiles --progress-num=1,2 "Built target cmakedummy"
-.PHONY : CMakeFiles/cmakedummy.dir/all
+say-hello/CMakeFiles/say-hello.dir/all:
+	$(MAKE) -f say-hello/CMakeFiles/say-hello.dir/build.make say-hello/CMakeFiles/say-hello.dir/depend
+	$(MAKE) -f say-hello/CMakeFiles/say-hello.dir/build.make say-hello/CMakeFiles/say-hello.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/chetan/udacity/cmake_tutorial/build/CMakeFiles --progress-num=3,4 "Built target say-hello"
+.PHONY : say-hello/CMakeFiles/say-hello.dir/all
 
 # Build rule for subdir invocation for target.
-CMakeFiles/cmakedummy.dir/rule: cmake_check_build_system
+say-hello/CMakeFiles/say-hello.dir/rule: cmake_check_build_system
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/chetan/udacity/cmake_tutorial/build/CMakeFiles 2
-	$(MAKE) -f CMakeFiles/Makefile2 CMakeFiles/cmakedummy.dir/all
+	$(MAKE) -f CMakeFiles/Makefile2 say-hello/CMakeFiles/say-hello.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/chetan/udacity/cmake_tutorial/build/CMakeFiles 0
-.PHONY : CMakeFiles/cmakedummy.dir/rule
+.PHONY : say-hello/CMakeFiles/say-hello.dir/rule
 
 # Convenience name for target.
-cmakedummy: CMakeFiles/cmakedummy.dir/rule
+say-hello: say-hello/CMakeFiles/say-hello.dir/rule
+
+.PHONY : say-hello
+
+# clean rule for target.
+say-hello/CMakeFiles/say-hello.dir/clean:
+	$(MAKE) -f say-hello/CMakeFiles/say-hello.dir/build.make say-hello/CMakeFiles/say-hello.dir/clean
+.PHONY : say-hello/CMakeFiles/say-hello.dir/clean
+
+#=============================================================================
+# Target rules for target hello-exe/CMakeFiles/cmakedummy.dir
+
+# All Build rule for target.
+hello-exe/CMakeFiles/cmakedummy.dir/all: say-hello/CMakeFiles/say-hello.dir/all
+	$(MAKE) -f hello-exe/CMakeFiles/cmakedummy.dir/build.make hello-exe/CMakeFiles/cmakedummy.dir/depend
+	$(MAKE) -f hello-exe/CMakeFiles/cmakedummy.dir/build.make hello-exe/CMakeFiles/cmakedummy.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/chetan/udacity/cmake_tutorial/build/CMakeFiles --progress-num=1,2 "Built target cmakedummy"
+.PHONY : hello-exe/CMakeFiles/cmakedummy.dir/all
+
+# Build rule for subdir invocation for target.
+hello-exe/CMakeFiles/cmakedummy.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/chetan/udacity/cmake_tutorial/build/CMakeFiles 4
+	$(MAKE) -f CMakeFiles/Makefile2 hello-exe/CMakeFiles/cmakedummy.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/chetan/udacity/cmake_tutorial/build/CMakeFiles 0
+.PHONY : hello-exe/CMakeFiles/cmakedummy.dir/rule
+
+# Convenience name for target.
+cmakedummy: hello-exe/CMakeFiles/cmakedummy.dir/rule
 
 .PHONY : cmakedummy
 
 # clean rule for target.
-CMakeFiles/cmakedummy.dir/clean:
-	$(MAKE) -f CMakeFiles/cmakedummy.dir/build.make CMakeFiles/cmakedummy.dir/clean
-.PHONY : CMakeFiles/cmakedummy.dir/clean
+hello-exe/CMakeFiles/cmakedummy.dir/clean:
+	$(MAKE) -f hello-exe/CMakeFiles/cmakedummy.dir/build.make hello-exe/CMakeFiles/cmakedummy.dir/clean
+.PHONY : hello-exe/CMakeFiles/cmakedummy.dir/clean
 
 #=============================================================================
 # Special targets to cleanup operation of make.
