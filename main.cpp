@@ -1,2 +1,6 @@
 #include<iostream>
-int main(){std::cout<<"HELLO, Anonymous! \n";}
+
+int main()
+{
+  std::cout<<"HELLO, Anonymous! \n";
+}
